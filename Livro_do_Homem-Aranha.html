@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homem-Aranha: Livros e Histórias</title>
+    <style>
+        /* Variáveis de Cores para o Modo Claro e Escuro */
+        :root {
+            --bg-color: #f4f4f9;
+            --text-color: #333333;
+            --card-bg: #ffffff;
+            --header-bg: #c70000; /* Vermelho clássico do Aranha */
+            --header-text: #ffffff;
+            --link-color: #0056b3;
+            --border-color: #dddddd;
+            --shadow: rgba(0,0,0,0.1);
+        }
+
+        .tema-escuro {
+            --bg-color: #121212;
+            --text-color: #e0e0e0;
+            --card-bg: #1e1e1e;
+            --header-bg: #800000;
+            --header-text: #ffffff;
+            --link-color: #4da3ff;
+            --border-color: #333333;
+            --shadow: rgba(0,0,0,0.5);
+        }
+
+        /* Configurações Gerais */
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* Cabeçalho */
+        header {
+            background-color: var(--header-bg);
+            color: var(--header-text);
+            padding: 20px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px var(--shadow);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+        }
+
+        /* Botão de Alternância de Tema */
+        #btnTemaEscuro {
+            background-color: #ffffff;
+            color: #333333;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.2s, transform 0.1s;
+        }
+
+        #btnTemaEscuro:hover {
+            background-color: #e2e8f0;
+            transform: scale(1.02);
+        }
+
+        /* Layout Principal com Flexbox */
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            padding: 30px 20px;
+            justify-content: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Cartões de Artigos */
+        article.cartao-livro {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 24px;
+            flex: 1 1 320px;
+            max-width: 500px;
+            box-shadow: 0 4px 6px var(--shadow);
+            text-align: left;
+            transition: transform 0.2s;
+        }
+
+        article.cartao-livro:hover {
+            transform: translateY(-3px);
+        }
+
+        article.cartao-livro h2 {
+            color: var(--header-bg);
+            margin-top: 0;
+            font-size: 1.5rem;
+        }
+
+        .autor {
+            font-style: italic;
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+
+        .tema-escuro .autor {
+            color: #aaa;
+        }
+
+        article.cartao-livro img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+
+        article.cartao-livro ul {
+            padding-left: 20px;
+        }
+
+        article.cartao-livro li {
+            margin-bottom: 10px;
+        }
+
+        /* Links */
+        a {
+            color: var(--link-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .fonte {
+            font-size: 0.85rem;
+            opacity: 0.8;
+            margin-top: 20px;
+        }
+
+        /* Rodapé */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--card-bg);
+            border-top: 1px solid var(--border-color);
+            margin-top: 40px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho com controle de tema -->
+    <header>
+        <h1>Universo Aranha</h1>
+        <button id="btnTemaEscuro" aria-label="Alternar modo escuro">Modo Escuro</button>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main>
+        <!-- Seção de Apresentação / Sinopse -->
+        <article class="cartao-livro">
+            <h2>Homem-Aranha: A História Definitiva</h2>
+            <p class="autor">Por: Estúdios Marvel & Planeta Editorial</p>
+            
+            <p>Mergulhe na trajetória de um dos maiores ícones dos quadradinhos e da cultura pop. Descubra os segredos por trás da criação de Peter Parker, os desafios de equilibrar a vida pessoal com o manto do herói e as batalhas épicas contra os seus maiores vilões.</p>
+            
+            <img src="https://images.unsplash.com/photo-1635863138275-d9b33297680b?auto=format&fit=crop&w=600&q=80" alt="Capa ilustrativa do livro do Homem-Aranha" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'600\' height=\'250\'><rect width=\'100%\' height=\'100%\' fill=\'%23ddd\'/><text x=\'50%\' y=\'50%\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-size=\'20\' fill=\'%23555\'>Imagem Indisponível</text></svg>'">
+            
+            <p><a href="https://www.marvel.com" target="_blank" rel="noopener noreferrer">Saiba mais no site oficial da Marvel</a></p>
+            <p class="fonte">Fonte: Guia Oficial de Leituras Marvel</p>
+        </article>
+
+        <!-- Seção de Curiosidades -->
+        <article class="cartao-livro">
+            <h2>Curiosidades do Herói</h2>
+            <p class="autor">Fatos Marcantes</p>
+            <ul>
+                <li>Peter Parker estreou na revista <em>Amazing Fantasy #15</em> em agosto de 1962.</li>
+                <li>O criador Stan Lee quase não aprovou o herói porque achava que o público rejeitaria uma temática baseada em aranhas.</li>
+                <li>O traje original contava com pequenas teias debaixo dos braços que ajudavam a planar nas primeiras versões.</li>
+            </ul>
+            <p class="fonte">Fonte: Arquivo Histórico dos Quadrinhos</p>
+        </article>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2026 - Desenvolvido por João Henrique 1º A | Projeto de Web Design.</p>
+    </footer>
+
+    <!-- Script de Interatividade -->
+    <script>
+        const btnTema = document.getElementById("btnTemaEscuro");
+        const corpoPagina = document.body;
+
+        btnTema.addEventListener("click", function() {
+            corpoPagina.classList.toggle("tema-escuro");
+
+            if (corpoPagina.classList.contains("tema-escuro")) {
+                btnTema.textContent = "Modo Claro";
+            } else {
+                btnTema.textContent = "Modo Escuro";
+            }
+        });
+    </script>
+</body>
+</html>
